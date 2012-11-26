@@ -80,7 +80,6 @@ $album = isset($_GET['album']) ? intval($_GET['album']) : null;
 	</style>
 </head>
 <body>
-	
 	<h1>Zonerama PHP API Example</h1>
 
 

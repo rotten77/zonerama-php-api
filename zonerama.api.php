@@ -9,7 +9,7 @@ class Zonerama {
 	/**
 	 * List of public albums
 	 */
-	public function publicAlbums() {
+	public function publicAlbums($json=false) {
 		$publicAlbums = array();
 		$profileUrl = "http://".$this->userName.".zonerama.com/";
 		/**
@@ -69,13 +69,13 @@ class Zonerama {
 			$publicAlbums[$id]['thumb'] = "http://".$this->userName.".zonerama.com/photos/".$thumbMatch[1]."_".$this->thumbWidth."x".$this->thumbHeight."_16.jpg";
 		}
 
-		return $publicAlbums;
+		return $json ? json_encode($publicAlbums) : $publicAlbums;
 	}
 
 	/**
 	 * Photos in album
 	 */
-	public function albumPhotos($albumId=0) {
+	public function albumPhotos($albumId=0,$json=false) {
 
 		$albumId = intval($albumId);
 		if($albumId==0) return false;
@@ -120,7 +120,7 @@ class Zonerama {
 			}
 		}
 
-		return $photos;
+		return $json ? json_encode($photos) : $photos;
 	}
 	
 }
