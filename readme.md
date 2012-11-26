@@ -28,6 +28,8 @@ List of public albums
 
 ```php
 $publicAlbums = $zonerama->publicAlbums();
+// result in JSON format:
+// $publicAlbums = $zonerama->publicAlbums(true);
 ```
 
 ```
@@ -47,6 +49,8 @@ List of public albums
 
 ```php
 $albumPhotos = $zonerama->albumPhotos([[ALBUM ID]]);
+// result in JSON format:
+// $albumPhotos = $zonerama->albumPhotos([[ALBUM ID]], true);
 ```
 
 ```

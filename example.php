@@ -6,7 +6,7 @@ $zonerama = new Zonerama;
 // $zonerama->thumbWidth = 140;
 // $zonerama->thumbHeight = 140;
 // User name
-$zonerama->userName = "rotten77";
+$zonerama->userName = "[[YOUR ZONERAMA USERNAME]]";
 
 $album = isset($_GET['album']) ? intval($_GET['album']) : null;
 
